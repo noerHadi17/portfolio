@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Real Estate Price Prediction
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body class="predictor-page">
+  <h1>
+   🏡 Real Estate Price Prediction
+  </h1>
+  <form id="predictForm">
+   <div class="form-section form-grid">
+    <h2>
+     📋 Property Details
+    </h2>
+    <div>
+     <label>
+      Land Size (m²)
+     </label>
+     <input name="land_size_m2" placeholder="e.g. 10.50" required="" step="0.01" type="number"/>
+    </div>
+    <div>
+     <label>
+      Building Size (m²)
+     </label>
+     <input name="building_size_m2" placeholder="e.g. 8.30" required="" step="0.01" type="number"/>
+    </div>
+    <div>
+     <label>
+      Road Width (m)
+     </label>
+     <input name="road_width" placeholder="e.g. 4.00" required="" step="0.01" type="number"/>
+    </div>
+    <div>
+     <label>
+      Number of Bedrooms
+     </label>
+     <input name="bedroom" required="" type="number"/>
+    </div>
+    <div>
+     <label>
+      Number of Bathrooms
+     </label>
+     <input name="bathroom" required="" type="number"/>
+    </div>
+    <div>
+     <label>
+      Number of Carports
+     </label>
+     <input name="carport" required="" type="number"/>
+    </div>
+    <div>
+     <label>
+      Number of Kitchens
+     </label>
+     <input name="kitchen" required="" type="number"/>
+    </div>
+    <div>
+     <label>
+      City
+     </label>
+     <select name="city">
+      <option>
+       Jakarta
+      </option>
+      <option>
+       Bogor
+      </option>
+      <option>
+       Depok
+      </option>
+      <option>
+       Tangerang
+      </option>
+      <option>
+       Bekasi
+      </option>
+     </select>
+    </div>
+    <div>
+     <label>
+      Property Type
+     </label>
+     <select name="property_type">
+      <option>
+       Rumah Tipe 21
+      </option>
+      <option>
+       Rumah Tipe 36
+      </option>
+      <option>
+       Rumah Tipe 45
+      </option>
+      <option>
+       Rumah Tipe 54
+      </option>
+      <option>
+       Rumah Tipe 60
+      </option>
+      <option>
+       Rumah Tipe 70
+      </option>
+      <option>
+       Rumah Tipe 120
+      </option>
+      <option>
+       Rumah Tipe &gt;120
+      </option>
+     </select>
+    </div>
+    <div>
+     <label>
+      Certificate
+     </label>
+     <select name="certificate">
+      <option>
+       SHM
+      </option>
+      <option>
+       HGB
+      </option>
+      <option>
+       Other
+      </option>
+     </select>
+    </div>
+    <div>
+     <label>
+      Water Source
+     </label>
+     <select name="water_source">
+      <option>
+       PAM/PDAM
+      </option>
+      <option>
+       Sumber Air
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="form-section form-grid">
+    <h2>
+     ⚙️ Additional Features
+    </h2>
+    <div>
+     <label>
+      Furniture
+     </label>
+     <select name="furniture">
+      <option>
+       Unfurnished
+      </option>
+      <option>
+       Semi Furnished
+      </option>
+      <option>
+       Fully Furnished
+      </option>
+     </select>
+    </div>
+    <div>
+     <label>
+      Facing Direction
+     </label>
+     <select name="house_facing">
+      <option>
+       North
+      </option>
+      <option>
+       South
+      </option>
+      <option>
+       East
+      </option>
+      <option>
+       West
+      </option>
+     </select>
+    </div>
+    <div>
+     <label>
+      Maid Bedrooms
+     </label>
+     <input name="maid_bedroom" required="" type="number" value="0"/>
+    </div>
+    <div>
+     <label>
+      Maid Bathrooms
+     </label>
+     <input name="maid_bathroom" required="" type="number" value="0"/>
+    </div>
+    <div>
+     <label>
+      Property Condition
+     </label>
+     <select name="property_condition">
+      <option>
+       Well Maintained
+      </option>
+      <option>
+       Renovated
+      </option>
+      <option>
+       New
+      </option>
+      <option>
+       Needs Renovation
+      </option>
+     </select>
+    </div>
+    <div>
+     <label>
+      Floor Level
+     </label>
+     <input name="floor_level" required="" type="number" value="1"/>
+    </div>
+    <div>
+     <label>
+      Garage
+     </label>
+     <input name="garage" required="" type="number" value="0"/>
+    </div>
+    <div>
+     <label>
+      Voltage Watt
+     </label>
+     <input name="voltage_watt" required="" type="number" value="2200"/>
+    </div>
+   </div>
+   <button type="submit">
+    Predict
+   </button>
+   <div id="result">
+   </div>
+  </form>
+  <script src="js/script.js">
+  </script>
+ </body>
+</html>
