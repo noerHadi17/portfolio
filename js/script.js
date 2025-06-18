@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       try {
-        const response = await fetch("http://localhost:5000/predict", {
+        const response = await fetch("https://web-production-4c1bf.up.railway.app/predict", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
@@ -84,4 +84,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-AOS.init(); // Biarkan tetap di luar DOMContentLoaded jika tidak bermasalah
+AOS.init();
