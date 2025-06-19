@@ -231,9 +231,12 @@
      <input name="voltage_watt" required="" type="number" value="2200"/>
     </div>
    </div>
-   <button type="submit">
-    Predict
-   </button>
+   <button id="predict-btn">Predict</button>
+     <div id="predicting-animation" style="display:none;">
+    <div class="loader"></div>
+    <p>Predicting...</p>
+  </div>
+  <div id="prediction-result"></div>
    <div id="result">
    </div>
   </form>
