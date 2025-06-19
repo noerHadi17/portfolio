@@ -370,3 +370,34 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* Animasi untuk kedap-kedip di atas gambar */
+.blink-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(61, 90, 254, 0.3); /* biru semi transparan */
+  animation: blinkOnTop 1s infinite alternate;
+  z-index: 2;
+  border-radius: 10px;
+  pointer-events: none; /* agar klik tetap ke elemen bawahnya */
+}
+
+/* Gambar tetap terlihat di bawah overlay */
+.blink-overlay img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Teks tetap tampil di atas semuanya */
+.blink-overlay .overlay {
+  position: absolute;
+  z-index: 3;
+}
+
+@keyframes blinkOnTop {
+  0% { opacity: 0.2; }
+  100% { opacity: 0.7; }
+}
+
+
