@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Tambahkan efek active scroll
+// efek active scroll
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -83,5 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// untuk animasi button
+  document.getElementById('predict-btn').addEventListener('click', function() {
+    document.getElementById('predicting-animation').style.display = 'block';
+    document.getElementById('prediction-result').innerHTML = '';
 
-AOS.init();
+    // Simulate prediction delay (replace with your actual prediction logic)
+    setTimeout(function() {
+      document.getElementById('predicting-animation').style.display = 'none';
+    }, 2000); // 2 seconds for demo
+  });
+  
+
+
+AOS.init(); 
