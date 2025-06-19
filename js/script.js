@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// efek active scroll
+// Tambahkan efek active scroll
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -82,7 +82,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  AOS.init(); 
+ 
 });
+  
+
+  //////////js untuk price_predictor/////////////
 // untuk animasi button
   document.getElementById('predict-btn').addEventListener('click', function() {
     document.getElementById('predicting-animation').style.display = 'block';
@@ -93,7 +98,25 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById('predicting-animation').style.display = 'none';
     }, 2000); // 2 seconds for demo
   });
-  
 
 
-AOS.init(); 
+
+   // ========== Load README.md using Showdown.js ==========
+document.addEventListener("DOMContentLoaded", function () {
+  const readmeContainer = document.getElementById("readme-content");
+
+  if (readmeContainer) {
+    fetch("README.md") // pastikan file README (1).MD diubah jadi README.md
+      .then((res) => res.text())
+      .then((markdown) => {
+        const converter = new showdown.Converter({ tables: true, strikethrough: true });
+        const html = converter.makeHtml(markdown);
+        readmeContainer.innerHTML = html;
+      })
+      .catch((err) => {
+        readmeContainer.innerHTML = `<p style="color:red;">❌ Gagal memuat README: ${err.message}</p>`;
+      });
+  }
+});
+
+
